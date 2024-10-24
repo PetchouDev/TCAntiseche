@@ -48,6 +48,12 @@ Si Obsidian vous demande si vous voulez cloner dans la racine du Vault, réponde
 Si il vous demande si le repo a déjà un dossier `.obsidian`, répondez `NO`.
 Enfin, garder la profondeur de clonage  par default en appuyant sur entrée. 
 
+#### 5 - Configuration du plugin 
+Pour pouvoir partager vos modifications, il faudra réaliser cette étape supplémentaire car contrairement à un ordinateur, votre téléphone n’a pas de Git system-wide. 
+
+Pour cela, il faut chercher l’onglet de configuration spécifique du plugin dans les paramètres, et descendre dans la section `Authentification` et compléter avec les informations adaptées. 
+
+Remplacez votre mot de passe par votre PAT. 
 #### 4 - Let’s go !
 Tout devrait être bon, envoyez moi un message ou un mail si vous avez du mal. 
 
@@ -56,10 +62,15 @@ Tout devrait être bon, envoyez moi un message ou un mail si vous avez du mal.
 ## Utilisation du plugin Git
 
 Le plugin est disponible depuis la palette de commande ou la barre d’outils (à gauche sur l’application de bureau, en cliquant sur la grille en bas à droite sur mobile)
+
 #### Mettre à jour depuis le repo
 Cliquez sur l'icone avec la flèche vers le bas (fetch) pour récupérer les dernières modifications du repo. 
 
 #### Envoyer vos modifications
 Dans la liste `Changes`, cochez les fichiers que vous voulez envoyer pour les placer dans la liste `Staged Changes`. 
-Cliquez ensuite sur le bouton `Commit` (la coche ou la flèche vers le haut entourée) pour valider vos modifications. 
+Cliquez ensuite sur le bouton `Commit` (la coche) pour valider vos modifications. 
 Enfin, cliquez sur le bouton `Push` (boutton avec la flèche vers le haut, devenu violet) pour envoyer vos modifications sur le repo.
+
+#### Tout faire d’un coup
+Le super bouton (flèche vers le haut dans un cercle) réalise toutes les opérations d’un coup. 
+À savoir dans l’ordre  `Fetch`, `Pull`, `Commit` et `Push`.
