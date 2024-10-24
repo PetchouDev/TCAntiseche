@@ -93,6 +93,7 @@ IPv6 peut être configuré de 3 manières:
 
 ## 7. Liens utiles
 - [IPv6 multicast addresses](https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml)
+- [IPv6 unicast addresses](https://www.iana.org/assignments/ipv6-unicast-address-assignments/ipv6-unicast-address-assignments.xhtml)
 
 
 
