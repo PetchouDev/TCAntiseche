@@ -4,7 +4,7 @@ Le but de ce repo est de créer une compilation de fiches pour nous aider dans n
 
 ## Get started
 ### 0 - Condition préliminaire
-Pour pouvoir partager vos notes, il faudra un accès en écriture au repo Git. Pour l'obtenir, envoyez moi un mail à [matheo.d91@gmail.com](mailto://matheo.d91@gmail.com).
+Pour pouvoir partager vos notes, il faudra un accès en écriture au repo Git. Pour l'obtenir, envoyez moi un mail à [matheo.d91@gmail.com](mailto://matheo.d91@gmail.com). Sinon, vous pouvez vous contenter de consulter ces notes.
 
 ### 1 - Installer Obsidian 
 En suivant [**> ce lien <**](https://obsidian.md/download), c'est un super éditeur de texte qui fait vraiment super bien son taf.
