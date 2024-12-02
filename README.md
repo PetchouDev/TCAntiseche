@@ -42,7 +42,7 @@ Ouvrez ensuite le panneau de gauche pour accéder aux paramètres, allez dans l�
 Installez et activez le plugin `Git`.
 Avec le bouton en bas à droite, ouvrez la barre d’outils puis la palette de commande et tapez `clone`.
 Sélectionnez `Git: clone an existing repo`
-Entrez l’URL, qui est `https://PAT@@github.com/PetchouDev/TCAntiseche`
+Entrez l’URL, qui est `https://PAT@github.com/PetchouDev/TCAntiseche`.
 Pour le chemin d’accès, laissez le champ vide et appuyez sur entrée. 
 Si Obsidian vous demande si vous voulez cloner dans la racine du Vault, répondez `Yes`.
 Si il vous demande si le repo a déjà un dossier `.obsidian`, répondez `NO`.
