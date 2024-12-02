@@ -38,4 +38,33 @@
 4. Echantillonner en fréquence c'est  : 
    ![[QCM3Q4.png]]
 
-# QCM 4 : ...
+# QCM 4 : Matlab
+
+1. Soit un signal périodique de période T en temps continu, constant et égal à 1 pendant une durée $\alpha = 0.25s$. On trace le spectre des $T \times |X_k|$ pour différentes valeurs de la période ($X_k$: le coefficient de Fourrier de rang k). Associer chacun des spectres à la valeur de la période correspondante.
+   ![[QCM4Q1.png]]
+2. Voici le début d'un script Matlab
+   ```
+   N=Fs*T;
+   n=0:N-1;
+   td=n*Ts;
+   F0=2
+   T=1
+   syms t
+   ```
+   La suite des instructions est donnée ci-dessous. Relier les bonnes réponses.
+   ![[QCM4Q2.png]]
+3. On veut créer le vecteur `x` suivant sous Matlab :
+   ```
+   x = 1 3 5 7 9
+   ```
+   Sélectionner les instructions permettant de créer le vecteur.
+   
+   ![[QCM4Q3.png]]
+4. Soit l'instruction suivante :
+   ```
+   [msg_decode, lag]=xcorr(code_x1,code_x1)
+   ```
+   ![[QCM4Q4.png]]
+
+# QCM5 : ...
+
