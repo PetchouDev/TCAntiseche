@@ -30,9 +30,12 @@
 
 # QCM 3 : échantillonnage 
 
-1. Q
-2. Q
-3. Q
-4. Q
+1. Soit $x(t)$ un signal de bande limité telle que : $X(f) = 0$ pour $|f| > f_M$. On choisit une fréquence d'échantillonnage $Fe = f_M$. 
+   ![[QCM3Q1.png]]
+2. Le signal $x(t)$ est échantillonné avec une période d'échantillonnage $T_e$. On obtient le signal $x_e(t)$.
+   ![[QCM3Q2.png]]
+3. Un signal continu apériodique a une fréquence minimale de 1kHz et une fréquence maximale de 4kHz.   ![[QCM3Q3.png]]
+4. Echantillonner en fréquence c'est  : 
+   ![[QCM3Q4.png]]
 
 # QCM 4 : ...
