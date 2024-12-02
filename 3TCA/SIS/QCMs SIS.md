@@ -1,4 +1,5 @@
 
+
 # QCM 1 : Chaine de traitement numérique
 
 1. Sélectionner les propositions correctes.![[QCM1Q1.png]]
@@ -66,5 +67,88 @@
    ```
    ![[QCM4Q4.png]]
 
-# QCM5 : ...
+# QCM5 : séries de Fourrier
+
+1. Soit $x(t)$ un signal périodique de puissance finie, de période T. Soit P sa puissance moyenne.
+   ![[QCM5Q1.png]]
+2. Soit $x_(t)$ un signal réel et périodique de période T=5ms, de valeur moyenne égale à 1V, d'amplitude max de 2V. On considère sa décomposition en Série de Fourrier réelle à l'aide de coefficients de Fourrier ak et bk.
+   ![[QCM5Q2.png]]
+3. Soit $x_(t)$ un signal périodique réel de puissance finie, de période T. Soit P sa puissance moyenne.
+   ![[QCM5Q3.png]]
+4. Soit un signal de durée finie T, correspondant au motif fondamental du signal périodique $x_p(t)$.
+   ![[QCM5Q4.png]]
+
+# QCM 6 : CFT
+1. Choisir les propositions correctes.
+   ![[QCM6Q1.png]]
+2. Enoncé simplifié du théorème de Parseval pour un signal à énergie finie.
+   ![[QCM6Q2.png]]
+3. La transformée de Fourrier ayant pour expression : $2+e^{-j\omega}+0.5e^{-j2\omega}$ peut correspondre au signal temporel :
+   ![[QCM6Q3.png]]
+4. La transformée de Fourrier d'un signal temps-continu et d'énergie finie suivante :
+   $X(f) = \int_{-\infty}^{+\infty}x(t)e^{-j2\pi ft}dt$  
+   ![[QCM6Q4.png]]
+5. Le spectre d'un signal temps-continu périodique de puissance finie est :
+   ![[QCM6Q5.png]]
+6. Soit $X(j\omega)$ la transformée de Fourrier du signal $x(t)$. La dérivée du signal $x(t)$ a pour transformée de Fourrier :
+   
+   ![[QCM6Q6.png]]
+7. Un signal temps-continu d'énergie finie a un spectre :
+   ![[QCM6Q7.png]]
+8. La transformée de Fourrier inverse d'un signal temps-continu est la suivante :
+   $x(t) = \int_{-\infty}^{+\infty}X(f)e^{j2\pi ft}df$ 
+   ![[QCM6Q8.png]]
+9. La transformée de Fourrier inverse d'un signal temps-continu est la suivante :
+   $x(t) = \frac{1}{2\pi} \int_{-\infty}^{+\infty} X(j\omega)exp(-j\omega)d\omega$
+
+   ![[QCM6Q9.png]]
+10. la transformée de Fourrier d'un signal temps-continu et d'énergie finie est la suivante :
+    $X(j\omega) = \int_{-\infty}^{+\infty}x(t)e^{-j\omega t}dt$ 
+    ![[QCM6Q10.png]]
+11. Choisir les réponses correctes
+    ![[QCM6Q11.png]]
+
+# QCM 7 : convolution
+1. Q
+2. Q
+3. Q
+4. Q
+5. Q
+6. Q
+7. Q
+8. Q
+9. Q
+10. Q
+11. Q
+
+
+# QCM 8 : Réponse fréquentielle
+
+1. Q
+2. Q
+3. Q
+4. Q
+5. Q
+6. Q
+7. Q
+8. Q
+9. Q
+10. Q
+11. Q
+
+# QCM 9 : transformée en Z
+1. Q
+2. Q
+3. Q
+4. Q
+5. Q
+6. Q
+7. Q
+8. Q
+9. Q
+10. Q
+11. Q
+
+
+
 
