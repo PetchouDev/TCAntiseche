@@ -109,46 +109,132 @@
     ![[QCM6Q11.png]]
 
 # QCM 7 : convolution
-1. Q
-2. Q
-3. Q
-4. Q
-5. Q
-6. Q
-7. Q
-8. Q
-9. Q
-10. Q
-11. Q
+1. Soit un STLI causal et initialement au repos de réponse impulsionnelle h, en entrée le signal x et en sortie le signal y. Cocher les propriétés valides :
+   ![[QCM7Q1.png]]
+2. Soit un signal discret x qui prend les valeurs suivantes : `x=[-1 1 1 -1`
+   Soit un STLI initialement au repos dont la réponse impulsionnelle h de durée finie prend les valeurs suivantes : `h=[1 -1 1 -1]`
+   Le résultat du filtrage de x par h est :
+   ![[QCM7Q2.png]]
+3. En temps continu, la réponse $y(t)$ d'un STLI caractérisé par sa réponse impulsionnelle $h(t)$, lorsque l'on applique une entrée $x(t)$ s'obtient par l'opération suivante : 
+   $y(t_0) = \int_{-\infty}^{+\infty}x(t_0-\tau)h(\tau)d\tau$ 
+   ![[QCM7Q3.png]]
+4. Quelle est la sortie d'un SLTI initialement au repos lorsque rentrée appliquée x\[n] et la réponse impulsionnelle h\[n] sont les signaux représentés ci-dessous :
+   ![[QCM7Q4.png]]
+5. L'opération de convolution
+   ![[QCM7Q5.png]]
+6. En temps discret, la réponse y\[n] d'un SLTl caractérisée par sa repanse impulsionnelle lorsqu'on applique une entrée x\[n] s'obtient par l'opération suivante :
+   $y[k] = \sum_{k=-\infty}^{+\infty} x[n]h[k-n]$ 
+   ![[QCM7Q6.png]]
+7. Soient deux signaux $x(t)$ et $y(t)$ que l'on va convoluer :
+   $z(t) = x(t) * y(t)$
+ ![[QCM7Q7.png]]
+8. En temps continu, la réponse $y(t)$ d'un SLTI caractérisé par sa réponse impulsionnelle $h(t)$, lorsqu'on applique ure entrée $x(t)$ s'obtient par l'opération suivante :
+   $y(t) = \int_{-\infty}^{+\infty}x(t-\tau)h(\tau)$  
+   ![[QCM7Q8.png]]
+9. En temps discret, la réponse d'un SL Tl caractérise par sa réponse impulsionnelle $h[n]$, lorsqu'on applique une entrée x\[n] s'obtient par l'opération suivante :
+	$y[n] = \sum_{k=-\infty}^{+\infty}x[k]h[n-k]$  
+   ![[QCM7Q9.png]]
+10. Soit un SLTI causal, stable et initialement au repos de réponse impulsionnelle h, en entrée le signal x et en sortie le signal y, cochez les expressions correctes :
+    
+    ![[QCM7Q10.png]]
+11. Soit un signal discret x qui prend les valeurs suivantes :
+    `x=[1 2 3 2 1]`
+    Soit un SLTI initialement au repos dont la réponse impulsionnelle h de durée finie prend les valeurs suivantes :
+	`h=[1 -1]`
+	Le résultat du filtrage de x par h est :
+    ![[QCM7Q11.png]]
 
 
 # QCM 8 : Réponse fréquentielle
 
-1. Q
-2. Q
-3. Q
-4. Q
-5. Q
-6. Q
-7. Q
-8. Q
-9. Q
-10. Q
-11. Q
+1. Associer les diagrammes de Bode à leur réponse fréquentielle.
+   ![[QCM8Q1P1.png]]
+	![[QCM8Q1P2.png]]
+2. On considère la forme canonique d'un système du 2nd ordre en temps continu.
+   ![[QCM8Q2.png]]
+3. Sélectionner les affirmations correctes.
+   ![[QCM8Q3.png]]
+4. Cochez le(s) réponse(s) en fréquences qui peuvent donner ce diagramme de Bode :
+   ![[QCM8Q4.png]]
+5. Soit la réponse impulsionnelle h\[n] d'un filtre numérique :
+   ![[QCM8Q5.png]]
+6. Dans les affirmations suivantes concernant les systèmes au 1er ordre, sélectionner celles qui sont correctes.
+   ![[QCM8Q6.png]]
+7. On considère la forme canonique d'un système du 1er ordre, sélectionner les affirmations qui sont correctes.
+   ![[QCM8Q7.png]]
+8. Choisir les bonnes réponses 
+   ![[QCM8Q8.png]]
+9. Soit un système du 2nd ordre défini par l'équation aux différences suivante :
+   $y[n]-2rcos(\theta)y[n-1]+r^2y[n-2]=x[n]$ 
+   ![[QCM8Q9.png]]
+10. Sélectionner les affirmations correctes.
+    ![[QCM8Q10.png]]
+11. Associer les diagrammes de Bade à leur réponse fréquentielle.
+    ![[QCM8Q11P1.png]]
+    ![[QCM8Q11P2.png]]
+    ![[QCM8Q11P3.png]]
 
 # QCM 9 : transformée en Z
-1. Q
-2. Q
-3. Q
-4. Q
-5. Q
-6. Q
-7. Q
-8. Q
-9. Q
-10. Q
-11. Q
+1. Soient deux systèmes temps discret notés S1 et S2 qui ont respectivement h1\[n] et h2\[n]) comme réponse impulsionnelle et H1(z) et H2(z) comme fonction de transfert.
+   La réponse impulsionnelle de SI est donnée ci-après :
+   ![[QCM9Q1P1.png]]
+   ![[QCM9Q1P2.png]]
+2. Parmi les réponses ci-après, quelle(s) est (sont) celle(s) correspondante(s) à la transformée en Z du signal x\[n] suivant?
+   x\[n] = 1 si n = -2
+   x\[n] = -1/2 si n = -1
+   x\[n]= -1 si n = 0
+   x\[n] = 1/2 si n = 1
+   x\[n] = 0 ailleurs
+   ![[QCM9Q2.png]]
+3. Soit le système causal décrit par l'équation aux différences suivante :
+    $y[n] — 0.5y[n-1] = x[n]$.
+    Le système est initialement au repos.
+    On applique à rentrée x\[n] = $\alpha. u [n]$ avec $\alpha \in \mathbb{R}$. 
+    Cocher les propositions correctes.
+   ![[QCM9Q3.png]]
+4. Soit un SLTI discret caractérisé par l'équation : $y[n] - \frac{1}{2} y[n-1]=x[n] + \frac{1}{3}x[n-1]$ 
+   Quelle est la fonction de transfert $H(z)$ ?
+   Quels sont les zéros et les pôles de ce SLTI ?
+   Que faut-il pour assurer la stabilité de ce SLTI ?
+   ![[QCM9Q4.png]]
+5. Le schéma bloc suivant défini le système S causal :
+   ![[QCM9Q5.png]]
+6.  Parmi les réponses ci-après, quelle(s) est (sont) celle(s) correspondante(s) à la transformée en Z du signal x\[n] suivant ?
+   x\[n] = 1 si n = 2
+   x\[n] = -1/2 si n = 1
+   x\[n]= -1 si n = 0
+   x\[n] = 1/2 si n = -1
+   x\[n] = 0 ailleurs
+   
+   ![[QCM9Q6.png]]
+7. Trois fonctions de transfert $H_i(z)$ avec $i\in[1;3]$ sont représentées par leur diagramme zéros/pôles.
+   (K=1 dans l'écriture factorisée de $H_i(z)$ à l'aide des zéros et des pôles)
+   Associer chaque fonction de transfert $H_i(z)$ au module de la réponse fréquentielle qui lui correspond.
+   ![[QCM9Q7.png]]
+8. Soit un système temps discret noté S1 qui a h1\[n] comme réponse impulsionnelle et H1(z) comme fonction de transfert.
+   La réponse impulsionnelle de S1 est donnée ci-après:
+   Cocher les bonnes réponses.
+   ![[QCM9Q8.png]]
+9. Six fonctions de transfert $H_i(z)$ avec $i\in[1;6]$ sont représentées par leur diagramme zéros/pôles.
+   (K=1 dans l'écriture factorisée de $H_i(z)$ à l'aide des zéros et des pôles)
+   Associer chaque fonction de transfert $H_i(z)$ au module de la réponse fréquentielle qui lui correspond.
+   ![[QCM9Q9P1.png]]
+   ![[QCM9Q9P2.png]]
+10. Soit le système causal décrit par l'équation aux différences suivante :
+    $y[n]+3y[n-1]=x[n]$
+    Le système est initialement au repos.
+    On applique à l'entrée $x[n]=\alpha.u[n]$ avec $\alpha \in \mathbb{R}$. 
+    Cocher les propositions correctes.
+    ![[QCM9Q10.png]]
+11. Soit le système causal décrit par l'équation aux différences suivante :
+    $y[n] — 0.5y[n-1] = x[n]$.
+    Le système est initialement au repos.
+    On applique à rentrée x\[n] = $\alpha. u [n]$ avec $\alpha \in \mathbb{R}$. 
+    Cocher les propositions correctes.
+    ![[QCM9Q11.png]]
+12. Le schéma bloc suivant défini le système S causal :
+    ![[QCM9Q12.png]]
 
 
-
+En espérant que ça vous aide. ❤️ sur vous la team.
 
