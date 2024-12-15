@@ -7,7 +7,6 @@
 - Basé sur une connexion TCP (port 179).
 
 **AS** : Autonomous System (réseau géré autonome)
-
 ---
 
 ## 2. **Caractéristiques principales de BGP**
@@ -23,35 +22,7 @@
 
 ---
 
-## 3. **Etats des sessions BGP**
-
-#### 1. **Idle** :
--  La session BGP est inactive. Aucun peering n'a été établi.
--  Le routeur tente de se connecter au voisin, mais il n'y a pas encore d'échange de messages.
-
-#### 2. **Connect**
-- La tentative de connexion TCP au voisin est en cours.
--  Si la connexion échoue, l'état retourne à `Idle`.
-
-#### 3. **Active**
-- La connexion TCP a échoué ou n'a pas été établie correctement.
--  Le routeur tente de se reconnecter, mais la session n'est pas encore prête.
-
-#### 4. **OpenSent**
-- Le routeur a envoyé un message **OPEN** à son voisin pour initier la session.
-- Attente de la réponse du voisin sous forme d'un message **OPEN**.
-
-#### 5. **OpenConfirm**
-- Le routeur a reçu le message **OPEN** du voisin et l'a validé.
-- Un message **KEEPALIVE** est échangé pour confirmer la connexion.
-
-#### 6. **Established**
-- La session BGP est pleinement établie.
-- L'échange de routes commence, et BGP commence à distribuer des informations de routage.
-- C’est l'état actif de la session où les préfixes BGP sont échangés.
-
----
-## 4. **Attributs BGP et critères de décision**
+## 3. **Attributs BGP et critères de décision**
 ### Attributs des routes BGP :
 1. **Weight** (Cisco uniquement) : Priorité locale ; non propagé hors du routeur.
 2. **Local Preference** : Indique la préférence pour les routes à travers un AS (plus élevé = préféré).
@@ -183,19 +154,22 @@ router bgp <local_as>
 - `set as-path prepend` : Ajoute des AS au chemin.
 
 ### Filtrer les préfixes
-Accepter ou refuser des routes spécifiques avec des listes d’accès ou des expressions régulières :
+Accepter ou refuser des routes spécifiques avec `<filtre>` :
 ```bash
-ip as-path access-list 1 permit ^$         # Accepter uniquement les routes locales
-ip as-path access-list 2 deny _65002_     # Refuser les routes passant par AS 65002
+ip as-path access-list 1 permit <regexp>
+ip as-path access-list 2 deny <regexp>
 !
 route-map FILTER_ROUTES permit 10
- match as-path 1
+ match as-path <filtre>
 !
 router bgp <local_as>
  neighbor <neighbor_ip> route-map FILTER_ROUTES in
 ```
-- `ip as-path access-list` : Définit une règle basée sur les chemins AS.
-- `match as-path` : Associe une politique à la règle.
+#### Options de filtre :
+- **Regex** : Exemple : `^$` (routes locales uniquement).
+- **AS Path** : Exemple : `_65002_` (routes passant par AS 65002).
+- **Préfixes** : Définir des plages spécifiques.
+- `match as-path` : Associe une politique à une règle de chemin AS.
 
 ### Configurer un peering BGP
 Définir un peering avec des conditions spécifiques :
@@ -210,7 +184,21 @@ router bgp <local_as>
 
 ---
 
-## 6. **Vérification et débogage**
+## 6. **ADJ-RIB-IN, LOC-RIB et ADJ-RIB-OUT**
+### ADJ-RIB-IN
+- Table contenant les routes reçues des voisins BGP avant application des filtres.
+- Affiche toutes les routes apprises, y compris celles rejetées par des politiques de filtrage.
+
+### LOC-RIB
+- Table des routes sélectionnées après application des filtres et critères de décision BGP.
+- Représente les routes utilisées dans la table de routage locale.
+
+### ADJ-RIB-OUT
+- Table contenant les routes prêtes à être envoyées aux voisins BGP après application des politiques de sortie.
+
+---
+
+## 7. **Vérification et débogage**
 ### Commandes de vérification :
 ```bash
 show bgp ipv4                  # Affiche la table BGP IPv4
