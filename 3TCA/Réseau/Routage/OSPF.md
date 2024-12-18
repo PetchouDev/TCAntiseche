@@ -41,6 +41,26 @@
 
 ---
 
+## 4. **Les paquets OSPF :**
+
+1. **Hello** :
+    - Établit et maintient les relations de voisinage.
+    - Contient les paramètres (ID de routeur, timers, etc.) pour valider la compatibilité entre routeurs.
+      
+2. **DBD (Database Description)** :
+    - Échange un résumé des LSA connues entre voisins OSPF pendant l'établissement d'une relation adjacente.
+      
+3. **LSR (Link State Request)** :
+    - Demande des informations spécifiques sur des LSA manquantes ou mises à jour.
+      
+4. **LSU (Link State Update)** :
+    - Transporte les LSA mises à jour vers les voisins.
+      
+5. **LSAck (Link State Acknowledgment)** :
+    - Accuse réception des paquets LSU.
+
+---
+
 ## 4. **Commandes utiles**
 
 ### Configuration OSPFv2 (IPv4) sur un routeur Cisco :
