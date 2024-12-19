@@ -112,6 +112,9 @@ Créer un ou plusieurs arbres reliant les routeurs ayant des membres du groupe.
     - **Dense mode** :
         
         - Utilise le flood-and-prune.
+	        - Flood => Inonde le réseau de paquets pour trouver toutes les routes
+	        - Prune => Un routeur sans client supprime sa route, un routeur qui en reçoit plusieurs avec des métriques différentes ne garde que la plus courte (prune les autres)
+	        - Assert => Un routeur qui reçoit plusieurs routes de même poids en choisit une arbitrairement
             
         - Adapté aux réseaux avec une forte densité de membres.
             
