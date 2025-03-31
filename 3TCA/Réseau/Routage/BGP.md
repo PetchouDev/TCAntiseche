@@ -24,12 +24,12 @@
 
 ## 3. **Attributs BGP et critères de décision**
 ### Attributs des routes BGP :
-1. **Weight** (Cisco uniquement) : Priorité locale ; non propagé hors du routeur.
+1. **Weight** (Cisco uniquement) : Priorité locale, non propagé hors du routeur.
 2. **Local Preference** : Indique la préférence pour les routes à travers un AS (plus élevé = préféré).
-3. **AS Path** : Nombre d’AS traversés ; plus court = préféré.
-4. **MED (Multi-Exit Discriminator)** : Préférence pour un point d'entrée spécifique dans un AS.
-5. **Type de routeur** : Préfère eBGP sur iBGP.
-6. **IGP Metric** : Coût interne pour atteindre le next-hop.
+3. **AS Path** : Nombre d’AS traversés, plus court = préféré.
+4. **MED (Multi-Exit Discriminator)** : Préférence pour un point d'entrée spécifique dans un AS, plus petit = préféré.
+5. **Type de routeur** : Préfère eBGP à iBGP.
+6. **IGP Metric** : Coût interne pour atteindre le next-hop, plus faible = préféré.
 7. **Multipath BGP** (si activé) : Permet plusieurs routes.
 8. **Router ID** : Plus bas = préféré.
 9. **Cluster list** : Préfère la route avec la liste la plus courte.
