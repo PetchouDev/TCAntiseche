@@ -29,9 +29,30 @@ CE1 ---- PE1 ---- P ---- PE2 ---- CE2
 
 ## Data Plane vs Control Plane
 
-- **Data Plane** : Responsable de la transmission des paquets. Dans un réseau MPLS, les routeurs utilisent les labels MPLS pour transférer les paquets, évitant ainsi l’analyse des en-têtes IP.
+### Data Plane
+
+Le Data Plane est responsable de la transmission des paquets. Dans un réseau MPLS, les routeurs utilisent les labels MPLS pour transférer les paquets, évitant ainsi l’analyse des en-têtes IP.
+
+Éléments du Data Plane :
+
+- Transmission des paquets MPLS
     
-- **Control Plane** : Gère l'établissement des chemins et l'allocation des labels. Il utilise des protocoles comme LDP ou BGP pour échanger des informations de routage et de labels entre les routeurs.
+- Commutation des labels
+    
+- Tables de FIB (Forwarding Information Base)
+    
+
+### Control Plane
+
+Le Control Plane gère l'établissement des chemins et l'allocation des labels. Il utilise des protocoles comme LDP ou BGP pour échanger des informations de routage et de labels entre les routeurs.
+
+Éléments du Control Plane :
+
+- Protocoles de routage (OSPF, IS-IS, BGP)
+    
+- Protocoles de distribution de labels (LDP, RSVP-TE)
+    
+- Tables de RIB (Routing Information Base)
     
 
 ## Label Distribution Protocol (LDP)
@@ -49,6 +70,111 @@ LDP est le protocole principal utilisé pour distribuer les labels MPLS entre le
 - **Avantages** : Simple à déployer et compatible avec le routage IP classique.
     
 - **Inconvénients** : Ne permet pas une gestion avancée de la QoS comme RSVP-TE.
+    
+
+## Resource Reservation Protocol - Traffic Engineering (RSVP-TE)
+
+RSVP-TE est une extension du protocole RSVP permettant la réservation de ressources et l’ingénierie du trafic dans un réseau MPLS.
+
+- **Cas d’usage** :
+    
+    - Réservation de bande passante pour les applications sensibles à la latence (ex. VoIP, streaming vidéo).
+        
+    - Création de chemins explicitement définis pour éviter la congestion réseau.
+        
+    - Redondance et protection des chemins en cas de panne.
+        
+- **Avantages** :
+    
+    - Permet une gestion avancée de la QoS
+        
+    - Prend en charge des chemins explicitement définis
+        
+- **Inconvénients** :
+    
+    - Complexité accrue
+        
+    - Nécessite plus de ressources de signalisation
+        
+
+## Segment Routing (SR-MPLS)
+
+Segment Routing (SR) est une alternative à MPLS utilisant des segments plutôt que des labels traditionnels.
+
+- **Cas d’usage** :
+    
+    - Réduction de la dépendance aux protocoles de signalisation (LDP, RSVP-TE).
+        
+    - Optimisation du trafic pour les applications SDN (Software-Defined Networking).
+        
+    - Scalabilité améliorée pour les grands réseaux.
+        
+- **Fonctionnement** :
+    
+    - Utilise des **Segment Identifiers (SID)** pour définir les chemins
+        
+    - Élimine la nécessité des protocoles de distribution de labels (ex: LDP)
+        
+    - Compatible avec MPLS et IPv6 (SRv6)
+        
+- **Avantages** :
+    
+    - Simplification du réseau
+        
+    - Meilleure scalabilité
+        
+- **Inconvénients** :
+    
+    - Nécessite une mise à jour des équipements
+        
+
+## Route Distinguishers (RD) vs Route Targets (RT) vs VRF
+
+### **Route Distinguisher (RD)**
+
+Un RD est un identifiant unique utilisé pour différencier les routes des différents clients dans un réseau MPLS VPN.
+
+- **Cas d’usage** :
+    
+    - Différenciation des routes provenant de plusieurs clients sur un même réseau MPLS.
+        
+    - Exemple : Deux clients ayant le même sous-réseau `192.168.1.0/24` peuvent être différenciés par des RD distincts (`65000:1` pour Client A, `65000:2` pour Client B).
+        
+- **Format** : `ASN:Numéro` ou `IP:Numéro`
+    
+- **Ne joue pas un rôle dans la sélection des routes**
+    
+
+### **Route Target (RT)**
+
+Les RT sont des attributs BGP permettant d’exporter et d’importer des routes entre différents VRF.
+
+- **Cas d’usage** :
+    
+    - Partage de routes entre plusieurs VRF sur différents sites.
+        
+    - Exemple : Un site A exporte ses routes avec `RT:65000:100`, et un site B importe ce même `RT:65000:100`, permettant ainsi l'interconnexion entre ces deux VRF.
+        
+- **Export RT** : Attribué aux routes d’un VRF pour les rendre accessibles aux autres VRF
+    
+- **Import RT** : Permet à un VRF d’accepter des routes provenant d’autres VRF
+    
+
+### **VRF (Virtual Routing and Forwarding)**
+
+Une VRF permet d'isoler plusieurs tables de routage sur un même routeur.
+
+- **Cas d’usage** :
+    
+    - Séparation des flux de trafic pour différents clients sur un même backbone MPLS.
+        
+    - Mise en place de services réseau privés sans conflit d’adressage.
+        
+    - Exemple : Un FAI peut avoir une VRF pour ses services internes et une autre pour ses clients, assurant ainsi une isolation complète des routes.
+        
+- Chaque VRF a sa propre FIB et RIB
+    
+- Utilisé pour l’implémentation de VPN MPLS
     
 
 ### Configuration Cisco - Activation MPLS et LDP
