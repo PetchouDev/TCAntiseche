@@ -5,7 +5,7 @@ Le but de ce repo est de créer une compilation de fiches pour nous aider dans n
 ## Get started
 
 #### 0 - Condition préliminaire
-Pour pouvoir partager vos notes, il faudra un accès en écriture au repo Git. Pour l'obtenir, envoyez moi un mail à [matheo.d91@gmail.com](mailto://matheo.d91@gmail.com). Sinon, vous pouvez vous contenter de consulter ces notes.
+Pour pouvoir partager vos notes, il faudra un accès en écriture au repo Git. Pour l'obtenir, envoyez moi le nom ou l'adresse mail de votre compte GitHub par mail à [matheo.d91@gmail.com](mailto://matheo.d91@gmail.com) (ou n'importe quel autre moyen si vous avez mon contact). Sinon, vous pouvez vous contenter de consulter ces notes.
 ### Installation sur PC/Mac/Linux
 
 #### 1 - Installer Obsidian 
