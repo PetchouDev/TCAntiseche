@@ -54,7 +54,7 @@ Pour pouvoir partager vos modifications, il faudra réaliser cette étape suppl�
 Pour cela, il faut chercher l’onglet de configuration spécifique du plugin dans les paramètres, et descendre dans la section `Authentification` et compléter avec les informations adaptées. 
 
 Remplacez votre mot de passe par votre PAT. 
-#### 4 - Let’s go !
+#### 6 - Let’s go !
 Tout devrait être bon, envoyez moi un message ou un mail si vous avez du mal. 
 
 
