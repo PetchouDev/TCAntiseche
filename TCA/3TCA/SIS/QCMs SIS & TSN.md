@@ -1,4 +1,6 @@
 
+# SIS
+---
 
 # QCM 1 : Chaine de traitement numérique
 
@@ -234,6 +236,144 @@
     ![[QCM9Q11.png]]
 12. Le schéma bloc suivant défini le système S causal :
     ![[QCM9Q12.png]]
+
+# TSN
+---
+
+# QCM 0 - Rappels de SIS
+
+1. Le filtre antirepliement est utilisé
+   ![[Pasted image 20250626102251.png]]
+   
+2. La sortie `y[n]` d'un système STLI s'obtient par :
+   ![[Pasted image 20250626102404.png]]
+   
+3. La DFT s'applique sur des signaux :
+   ![[Pasted image 20250626102454.png]]
+
+4. La réponse fréquentielle $H(e^{j\omega})$ d'un système est : 
+	-  ❌ La Une fonction réelle uniquement
+	-  ❌ La transformée de Laplace de h(t)h(t)h(t)
+	-  ❌ Calculable quel que soit le système.
+	-  ✅ La transformée de Fourier de `h[n]`
+	-  ✅ La transformée en Z de `h[n]` en $z=e^{jω}$ si le système est stable
+
+5. La réponse impulsionnelle` h[n]` d'un système est :
+   ![[Pasted image 20250626102845.png]]
+
+6. La transformée de Fourier d'un signal périodique discret donne :
+   ![[Pasted image 20250626103005.png]]
+   
+7.  La transformée en Z est :
+	- ❌ Réservée aux signaux continus
+	- ❌ Une transformée dans le plan complexe $z=e^{j\omega}$
+	- ✅ S'applique aux signaux et aux systèmes temps discret
+	- ❌ Identique à la DFT
+
+8. Les pôles d'un système déterminent :
+   ![[Pasted image 20250626105638.png]]
+
+# QCM Cours 1
+
+1. Quel(s) composant(s) n'est/ne sont pas passif(s)?
+   ![[Pasted image 20250626105816.png]]
+
+2. Pourquoi utiliser un filtre de reconstruction ?
+   ![[Pasted image 20250626105904.png]]
+
+3. Si x(t) a une fréquence maximale de 8 kHz, quelle est la fréquence minimale d'échantillonnage ?
+   ![[Pasted image 20250626105941.png]]
+
+4. Une réponse impulsionnelle h(t) est liée à H(f) par :
+   ![[Pasted image 20250626110010.png]]
+
+5. La réponse fréquentielle d'un filtre est :
+   ![[Pasted image 20250626110055.png]]
+
+6. Un système SLTI est :
+   ![[Pasted image 20250626110213.png]]
+   
+7. Quelle est la frequence maximale presente dans le signal, encore appelee frequence de Nyquist, exprimee en Hz, si Fs = 10 kHz ?
+   ![[Pasted image 20250626110259.png]]
+   
+8. Cochez les bonnes réponses :
+   ![[Pasted image 20250626110312.png]]
+
+# QCM cours 2
+
+1. Un avantage d'un filtre FIR est :
+   ![[Pasted image 20250626112607.png]]
+
+2. Un filtre à réponse impulsionnelle finie est :
+   ![[Pasted image 20250626113003.png]]
+   
+3. La fonction de transfert H(z) d'un filtre IIR contient :
+   ![[Pasted image 20250626112746.png]]
+
+4. Quelle est la forme générale d'un filtre IIR ?
+   ![[Pasted image 20250626112842.png]]
+
+5. La méthode de l'invariant impulsionnel :
+   ![[Pasted image 20250626112922.png]]
+
+6. Un filtre IIR est causal si :
+   ![[Pasted image 20250626113053.png]]
+
+7. La transformation bilinéaire permet :
+   ![[Pasted image 20250626113154.png]]
+
+8. Quelle est la fréquence de Nyquist si Fs = 20 kHz (en Hz)
+   ![[Pasted image 20250626113318.png]]
+   
+9. Un filtre FIR est toujours stable et à phase est linéaire.
+   ![[Pasted image 20250626113409.png]]
+
+10. Un filtre conçu par fenêtrage
+    ![[Pasted image 20250626113435.png]]
+
+# QCM Cours 4
+
+1. Comparé au LMS, l'algorithme RLS :
+   ![[Pasted image 20250626113706.png]]
+
+2. Le filtre de Wiener donne : 
+   ![[Pasted image 20250626113731.png]]
+
+3. La mise à jour des coefficients dans LMS suit :
+   ![[Pasted image 20250626113807.png]]
+
+4. Un filtre RLS :
+   **🔺MANQUE PEUT ETRE UNE REPONSE 🔺**
+	- ❌ **a.** Est une version allégée du filtre WLS grâce à son implantation récursive.
+	- ❌ **b.** A une fonction de coût qui repose sur l'erreur quadratique cumulée.
+	- ✅ **c.** A pour principal inconvénient la lenteur.
+	- ✅ **d.** A une fonction de coût qui repose sur l'erreur quadratique cumulée pondérée.
+	- ❌ **e.** Donne des performances identiques à celles du filtre de Wiener.
+
+
+5. filtre adaptatif ajuste ses coefficients :    
+	- ✅ De manière à diminuer la fonction de coût basée sur l'erreur présente et éventuellement passée.
+	- ❌ Aléatoirement.
+	- ✅ En utilisant le signal d’entrée et le signal désiré de référence.
+	- ❌ En se déplaçant dans la direction du gradient de la fonction de coût par rapport à ces coefficients.
+	- ❌ Une seule fois
+	- ✅ À la réception de chaque nouvel échantillon.
+
+6. Le signal d'erreur e(n) est :
+   ![[Pasted image 20250626113938.png]]
+
+7. Dans un schéma AIC, le filtre adapte ses coefficients pour que :
+   ![[Pasted image 20250626114009.png]]
+
+8. Un cosinus s'exprime récursivement à partir de l'expression
+suivante :
+   ![[Pasted image 20250626114036.png]]
+
+9. L'annulation d'écho (AEC) est une application typique des filtres adaptatifs qui peut fournir une estimation spectrale du signal d(n).
+   ![[Pasted image 20250626114138.png]]
+
+10. L'algorithme LMS cherche à réduire l'erreur quadratique moyenne en optimisant ses coefficients à partir d'une fonction de coût basée sur l'erreur quadratique instantanée.
+    ![[Pasted image 20250626114228.png]]
 
 
 En espérant que ça vous aide. ❤️ sur vous la team.
